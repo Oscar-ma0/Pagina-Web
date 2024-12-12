@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualización de Emprendimientos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<section>
+
+ <h1 id="titulo"> Emprendimiento en Colombia</h1>
+    <div class="button-container">
+      <nav class="navbar">
+        <button class="button1" onclick="window.open('https://compite.com.co/indice-subnacional-de-emprendimiento/', '_blank')">Información</button>
+        <button class="button2" onclick="location.href='#datos'">Visualización de Datos</button>
+        <button class="button3" onclick="location.href='#encuesta'">Encuesta</button>
+        </nav>
+    </div>
+   </section>
+
+<button onclick="window.open('https://www.mundoemprende.com/emprendedores/los-datos-mas-curiosos-del-emprendimiento/', '_blank')">
+Consulta más datos aquí
+</button>
+
+<h2 id="noticias">Noticias</h2>
+    <a href="https://news.google.com/search?q=emprendimiento%20en%20Colombia&hl=es&gl=ES&ceid=ES%3Aes" target="_blank" class="link-imagen">
+        <img src="Images/Noticias.png" alt="Enlace a sitio de emprendimiento">
+    </a>
+
+
+<section id="datos">
+<body>
+ <div class="centrar">
+    <div class="chart-container1 " >
+        <h2>Inserte datos</h2>
+        <input type="file" id="fileBarras" accept=".csv">
+        <canvas id="chartBarras"></canvas>
+    </div>
+    <div class="chart-container2">
+        <h2>Inserte datos</h2>
+        <input type="file" id="filePie" accept=".csv">
+        <canvas id="chartPie"></canvas>
+    </div>
+    <div class="chart-container3">
+        <h2>Inserte datos</h2>
+        <input type="file" id="fileLineas" accept=".csv">
+        <canvas id="chartLineas"></canvas>
+    </div>
+    <div class="chart-container4">
+        <h2>Inserte datos</h2>
+        <input type="file" id="fileArea" accept=".csv">
+        <canvas id="chartArea"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</div>
+</body>
+</section>
+
+
+
+<section id="encuesta">
+    <h2 id="encuesta2">Calcular tu nivel de emprendimiento</h2>
+    <form id="surveyForm">
+        <label for="personas">¿Cuántas personas participan en tu proyecto?</label>
+        <input type="number" id="personas" required min="1" placeholder="Ingrese el número de personas">
+
+        <label for="tipoEmprendimiento">Tipo de emprendimiento:</label>
+        <select id="tipoEmprendimiento">
+            <option value="">Social</option>
+            <option value="tecnológico">Tecnológico</option>
+            <option value="artesanal">Artesanal</option>
+        </select>
+
+        <button type="button" onclick="calcularEmprendimiento()">Calcular</button>
+    </form>
+    <p id="resultado"></p>
+</section>
+</body>
+<footer>
+   
+</footer>
+
+<script src="scripts.js"></script>
+
+</html>
+
+
